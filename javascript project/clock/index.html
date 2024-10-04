@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(69, 69, 90);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            background-color: rgb(52, 113, 139);
+            max-width: 700px;
+            width: 90%;
+            height: 250px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 10px;
+        }
+        h1{
+            padding: 20px;
+        }
+        .count{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 15px;
+        }
+        .count div{
+            background-color: rgb(136, 149, 161);
+            padding:15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            gap: 5px;
+            color: white;
+            font-weight: 500;
+        }
+        span{
+            letter-spacing: 2px;
+        }
+        #dated{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Clock</h1>
+        <div class="count">
+            <div>
+                <div id="dated" >
+
+                    <span id="years">00</span>
+                    <span id="month">00</span>
+                    <span id="date">00</span> 
+                </div>
+                Days
+            </div>
+            <div class="hour">
+                <span id="hours">00</span>
+                Hr
+            </div>
+            <div>
+                <span id="minits">00</span>
+                Mins
+            </div>
+            <div>
+                <span id="second">00</span>
+                Sec
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

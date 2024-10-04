@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100;
+            width: 100vw;
+        }
+
+        .container {
+            height: 95vh;
+            margin: 1rem;
+            background-color: rgb(201, 219, 241);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toggle-box {
+            height: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .up {
+            max-width: 200px;
+            background-color: rgb(211, 208, 208);
+            height: 100px;
+            border-radius: 25px;
+            text-align: left;
+            display: flex;
+            justify-content: left;
+            padding: 8px;
+        }
+
+        .cross {
+            height: 100%;
+            width: 50%;
+            background-color: rgb(152, 150, 150);
+            padding: 5px;
+            border-radius: 25px;
+            padding: 10px;
+            text-align: center;
+            padding: 15px;
+        }
+        .down{
+            max-width: 200px;
+            background-color: rgba(66, 169, 220, 0.215);
+            height: 100px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: right;
+            padding: 8px;
+        }
+        .right{
+            height: 100%;
+            width: 50%;
+            background-color: rgb(81, 168, 240);
+            padding: 5px;
+            border-radius: 25px;
+            padding: 10px;
+            text-align: center;
+            padding: 15px;
+        }
+        .right img {
+            height: 60px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="toggle-box">
+            <div class="up">
+                <div class="cross">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                        overflow="visible" stroke="gray" stroke-width="10" stroke-linecap="round">
+                        <line x2="50" y2="50" />
+                        <line x1="50" y2="50" />
+                    </svg>
+                </div>
+            </div>
+            <div class="down">
+                <div class="right">
+                    <img src="check-mark-svgrepo-com.svg" alt="error">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

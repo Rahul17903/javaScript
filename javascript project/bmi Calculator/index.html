@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+        }
+        .container {
+        width: 575px;
+        height: 625px;
+        display: grid;
+        place-items: center;
+
+        background-color: #797978;
+        }
+        #height,
+        #weight {
+        width: 150px;
+        height: 25px;
+        margin-top: 30px;
+        }
+
+
+        #results {
+            height: 100px;
+        font-size: 35px;
+        color: rgb(241, 241, 241);
+        }
+
+        button {
+        width: 150px;
+        height: 35px;
+        margin-left: 90px;
+        margin-top: 25px;
+        background-color: #fff;
+        padding: 1px 30px;
+        border-radius: 8px;
+        color: #212121;
+        text-decoration: none;
+        border: 2px solid #212121;
+
+        font-size: 25px;
+        }
+
+        h1 {
+        padding-left: 15px;
+        padding-top: 25px;
+        
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="number" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="number" id="weight" /></p>
+        <button id="cal">Calculate</button>
+        <div id="results"></div>
+      </form>
+    </div>
+  </body>
+  <script>
+    const frm = document.querySelector("form")
+    const result = document.getElementById("results")
+
+    frm.addEventListener("submit", (event) => {
+        event.preventDefault(); 
+
+        const height = parseFloat(document.getElementById("height").value) / 100; 
+        const weight = parseFloat(document.getElementById("weight").value);
+        
+        if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+            result.innerText = "Please enter valid numbers for height and weight.";
+            return;
+        }
+        
+        const bmi = parseFloat((weight / (height * height)).toFixed(2));
+        if(bmi <= 18.5){
+            result.innerText = `you are too under weight and you bmi is ${bmi}`
+        }
+        else if(bmi >= 18.5 && bmi <= 25.5){
+            result.innerText = `you are a fit and your bmi is ${bmi}`
+        }
+        else{
+            result.innerText = `oh!! no I am sorry sir but you are a fat man and bmi is ${bmi}`
+        }
+        
+    });
+  </script>
+</html>

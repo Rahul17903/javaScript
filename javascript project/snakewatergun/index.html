@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = prompt("enter a 's', 'w', 'g' ");
+        let cpuInput = Math.floor(Math.random() * 3);
+        let cpu = ["s", "w", "g"][cpuInput];
+        const match = ((user, cpu) => {
+            if(cpu === user){
+                return "NoBoody have win , match is draw"
+            }
+            else if(user === "s" && cpu ==="w"){
+                return "user "
+            }
+            else if(user === "w" && cpu ==="s"){
+                return "cpu "
+            }
+            else if(user === "s" && cpu ==="g"){
+                return "cpu "
+            }
+            else if(user === "g" && cpu ==="s"){
+                return "user "
+            }
+            else if(user === "w" && cpu ==="g"){
+                return "user "
+            }
+            else if(user === "g" && cpu ==="w"){
+                return "cpu "
+            }
+        })
+        let result = match(user, cpu)
+        document.write(`CPU is ${cpu} and User is ${user} and the winer is ${result}` )
+    </script>
+</body>
+
+</html>
